@@ -6,27 +6,34 @@ export class favorites {
     this.IdCounter = IdCounter;
 
   }
+  //loop for take action on element with class ButtonClass
   init() {
     const global = this;
-    document.cookie = 'favorites=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
     // take action for class elements
     var elements = document.getElementsByClassName(this.ButtonClass);
     for (var i = 0; i < elements.length; i++) {
       elements[i].addEventListener(
         'click',
         function() {
-          global.change(this.getAttribute('data-id'));
+          global.change(this.getAttribute('data-id')); //add action for change cookie
         },
         false
       );
     }
   }
+  //clear cookie favorites
+  clear(){
+    document.cookie = 'favorites=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+  }
+  //get arry of cookie favorites or false
   get() {
     return checkACookieExists();
   }
+  //return parameters, for tests
   getParameters() {
     return this.ButtonClass + this.like + this.notlike + this.IdCounter;
   }
+  //add or remove id in cookie favorites
   change(id) {
     let cookie = checkACookieExists('favorites');
     if (cookie != false) {
@@ -42,13 +49,13 @@ export class favorites {
     this.update();
     return cookie;
   }
+  //update in document the counter
   update() {
-    //find counter id and change text
-    let nbr = checkACookieExists();
-     document.getElementById(this.IdCounter).textContent = nbr.length;
+     document.getElementById(this.IdCounter).textContent = checkACookieExists().length;
   }
 }
 
+//function for get false or array of cookie favorites
 function checkACookieExists() {
   if (document.cookie == undefined) return false;
   let field = document.cookie.split('; ').find(row => row.startsWith('favorites='));
