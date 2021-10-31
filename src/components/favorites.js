@@ -43,7 +43,7 @@ export class favorites {
   update() {
     //find counter id and change text
     let nbr = checkACookieExists();
-    if (nbr != false) document.getElementById(this.IdCounter).textContent = JSON.stringify(nbr);
+    if (nbr != false) document.getElementById(this.IdCounter).textContent = nbr.length;
   }
 }
 

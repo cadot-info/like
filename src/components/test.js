@@ -3,9 +3,9 @@
  */
  const fs = require("fs");
  const path = require("path");
- const html = fs.readFileSync(path.resolve(__dirname, "./src/index.html"), "utf8");
+ const html = fs.readFileSync(path.resolve(__dirname, "../index.html"), "utf8");
  
- const favorites = require("./dist/favorites.js");
+ import { favorites } from './favorites';
  
  
  const fav = new favorites();

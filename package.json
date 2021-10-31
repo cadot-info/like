@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A javascript like with cookies and ajax possibility",
   "author": {
-    "name": "cadot.info",
+    "name": "cadot.info"
   },
   "license": "ISC",
   "main": "src/index.js",
@@ -11,7 +11,8 @@
     "clean": "rimraf ./dist",
     "format": "prettier --write src/**/*.{js,json,md}",
     "build": "npm run clean && parcel build src/index.html --no-minify --no-source-maps",
-    "start": "parcel -p 8080 --hmr-port 8081 src/index.html --open"
+    "start": "parcel -p 8080 --hmr-port 8081 src/index.html --open",
+    "test": "jest"
   },
   "keywords": [
     "javascript",
