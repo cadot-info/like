@@ -50,5 +50,11 @@
   "maintainers": [
     "Cadot.info (webmestre@cadot.info) (https://cadot.info)"
   ],
-  "contributors": []
+  "contributors": [],
+  "files":[
+    "dist/",
+    "src/",
+    "package.json",
+    "README.md"
+  ]
 }
