@@ -36,7 +36,7 @@ export class favorites {
   }
   //return parameters, for tests
   getParameters() {
-    return this.ButtonClass + this.notlike + this.notlike + this.IdCounter;
+    return this.ButtonClass + this.like + this.notlike + this.IdCounter;
   }
   //add or remove id in cookie favorites
   change(id) {

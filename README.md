@@ -1,46 +1,40 @@
-The starter kit contains all the necessary packages and scripts that you would need to kick off your next web development project using modern JavaScript.
+<!-- TITLE/ -->
 
-There's no need to configure Webpack, Eslint or Babel, just clone this repository and you are good to go. The boilerplate also includes a minimal project in the ./src directory to help you quickly spin up a project.
+<h1>Like library</h1>
 
-If something doesn’t work, please tweet [@labnol](https://twitter.com/labnol).
+<!-- /TITLE -->
 
-## Getting Started
 
-* Get a copy of the code
-```bash
-git clone https://github.com/labnol/javascript-starter my-project
-cd my-project
-```
+<!-- BADGES/ -->
 
-* Install the package dependencies
-```bash
-npm install
-```
+<span class="badge-npmversion"><a href="https://npmjs.org/package/cadot-info-like" title="View this project on NPM"><img src="https://img.shields.io/npm/v/cadot-info-like.svg" alt="NPM version" /></a></span>
+<span class="badge-npmdownloads"><a href="https://npmjs.org/package/cadot-info-like" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/cadot-info-like.svg" alt="NPM downloads" /></a></span>
+<br class="badge-separator" />
+<span class="badge-paypal"><a href="https://www.paypal.com/donate?hosted_button_id=E9S29AEA3HGXQ" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
 
-Note: if you have the Yarn package manager installed, you can just run yarn.
+<!-- /BADGES -->
 
-* Open the source code in Visual Studio Code and modify the application to your liking
-```bash
-code .
-```
+<!-- DESCRIPTION/ -->
 
-* Run the app in develpment. Open localhost:8080 to view the app in your browser. The page will automatically reload if you make any changes to the code.
-```bash
-npm start
-```
+A javascript like with cookies and ajax possibility
 
-* Build the app for production to the dist/ folder. Parcel bundles the app in production mode and optimizes the build for the best performance.
-```bash
-npm run build
-```
+<!-- /DESCRIPTION -->
 
-Your app is ready to be deployed.
+<!-- INSTALL/ -->
 
-## Contributing
+<h2>Install</h2>
 
-We'd love to have your helping hand. Ping me on twitter [@labnol](https://twitter.com/labnol) to discuss or file an issue.
+<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
+<ul>
+<li>Install: <code>npm install --save cadot-info-like</code></li>
+<li>Import: <code>import * as pkg from ('cadot-info-like')</code></li>
+<li>Require: <code>const pkg = require('cadot-info-like')</code></li>
+</ul>
 
-### License
+<!-- /INSTALL -->
 
-JavaScript Starter Kit for Modern Web Development is open source software licensed as MIT.# like
-# like
+
+## Usage
+
+- import the library by `import { favorites } from 'favorites'`
+- 

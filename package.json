@@ -1,31 +1,31 @@
 {
-  "name": "cadoot-info-like",
+  "name": "cadot-info-like",
   "version": "1.0.0",
   "description": "A javascript like with cookies and ajax possibility",
-  "author": {
-    "name": "cadot.info"
-  },
-  "license": "ISC",
+  "author": "2021+ Cadot.info ltd <webmestre@cadot.info> (https://cadot.info)",
+  "license": "MIT",
   "main": "src/index.js",
   "scripts": {
     "clean": "rimraf ./dist",
     "format": "prettier --write src/**/*.{js,json,md}",
     "build": "npm run clean && parcel build src/index.html --no-minify --no-source-maps",
     "start": "parcel -p 8080 --hmr-port 8081 src/index.html --open",
-    "test": "jest"
+    "test": "jest",
+    "compile": "projectz compile",
+    "posttest": "npm run compile"
   },
   "keywords": [
     "javascript",
-    "like","favorites"
+    "like",
+    "favorites"
   ],
   "homepage": "https://github.com/cadot-info/like#readme",
   "bugs": {
     "url": "https://github.com/cadot-info/like/issues"
   },
-
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cadot-info/like.git"
+    "url": "https://github.com/cadot-info/like.git"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -44,6 +44,11 @@
     "fs": "^0.0.1-security",
     "jest": "^27.3.1",
     "jsdom": "^18.0.0",
-    "path": "^0.12.7"
-  }
+    "path": "^0.12.7",
+    "projectz": "^2.22.0"
+  },
+  "maintainers": [
+    "Cadot.info (webmestre@cadot.info) (https://cadot.info)"
+  ],
+  "contributors": []
 }
