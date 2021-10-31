@@ -51,7 +51,7 @@
     "Cadot.info (npm@cadot.info) (https://cadot.info)"
   ],
   "contributors": [],
-  "files":[
+  "files": [
     "dist/",
     "src/",
     "package.json",
