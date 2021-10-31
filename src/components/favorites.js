@@ -14,8 +14,8 @@ export class favorites {
     var elements = document.getElementsByClassName(this.ButtonClass);
     for (var i = 0; i < elements.length; i++) {
       //text by cookie
-      if(cookie.includes(elements[i].getAttribute('data-id')))elements[i].textContent=this.notlike
-      else elements[i].textContent=this.like
+      if(cookie.includes(elements[i].getAttribute('data-id')))elements[i].innerHTML=this.notlike
+        else elements[i].innerHTML=this.like
 
       elements[i].addEventListener(
         'click',
@@ -55,8 +55,8 @@ export class favorites {
     for (var i = 0; i < elements.length; i++) {
       if(elements[i].getAttribute('data-id')==id)
       {
-        if(cookie.includes(id))elements[i].textContent=this.notlike
-        else elements[i].textContent=this.like
+        if(cookie.includes(id))elements[i].innerHTML=this.notlike
+        else elements[i].innerHTML=this.like
       }
     };
     this.update();
