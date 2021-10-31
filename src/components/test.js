@@ -35,7 +35,7 @@
    //test remove favorite
    expect(fav.change(1)).toStrictEqual([4, 3]);
       //test on document
-      expect(document.getElementById('counter').textContent).toBe("2")
+   expect(document.getElementById('counter').textContent).toBe("2")
  
  });
  
