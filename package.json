@@ -2,7 +2,7 @@
   "name": "cadot-info-like",
   "version": "1.0.0",
   "description": "A javascript like with cookies and ajax possibility",
-  "author": "2021+ Cadot.info ltd <webmestre@cadot.info> (https://cadot.info)",
+  "author": "2021+ Cadot.info ltd <npm@cadot.info> (https://cadot.info)",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
@@ -48,7 +48,7 @@
     "projectz": "^2.22.0"
   },
   "maintainers": [
-    "Cadot.info (webmestre@cadot.info) (https://cadot.info)"
+    "Cadot.info (npm@cadot.info) (https://cadot.info)"
   ],
   "contributors": [],
   "files":[
