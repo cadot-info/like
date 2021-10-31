@@ -6,12 +6,17 @@ export class favorites {
     this.IdCounter = IdCounter;
 
   }
-  //loop for take action on element with class ButtonClass
+  //loop for take action on element with class ButtonClass and add like or not like on element
   init() {
     const global = this;
+    let cookie = checkACookieExists('favorites');
     // take action for class elements
     var elements = document.getElementsByClassName(this.ButtonClass);
     for (var i = 0; i < elements.length; i++) {
+      //text by cookie
+      if(cookie.includes(elements[i].getAttribute('data-id')))elements[i].textContent=this.notlike
+      else elements[i].textContent=this.like
+
       elements[i].addEventListener(
         'click',
         function() {
@@ -31,7 +36,7 @@ export class favorites {
   }
   //return parameters, for tests
   getParameters() {
-    return this.ButtonClass + this.like + this.notlike + this.IdCounter;
+    return this.ButtonClass + this.notlike + this.notlike + this.IdCounter;
   }
   //add or remove id in cookie favorites
   change(id) {
@@ -46,6 +51,14 @@ export class favorites {
     var d = new Date();
     d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * 360);
     document.cookie = 'favorites=' + JSON.stringify(cookie) + ';path=/;expires=' + d.toGMTString();
+    var elements = document.getElementsByClassName(this.ButtonClass);
+    for (var i = 0; i < elements.length; i++) {
+      if(elements[i].getAttribute('data-id')==id)
+      {
+        if(cookie.includes(id))elements[i].textContent=this.notlike
+        else elements[i].textContent=this.like
+      }
+    };
     this.update();
     return cookie;
   }
