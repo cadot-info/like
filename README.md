@@ -60,6 +60,9 @@ For example, you can use with font-awesome
     "counterGlobal"
 );
 ```
+
+please give issues or Pull Request in github ;-)
+
 <!-- LICENSE/ -->
 
 <h2>License</h2>
@@ -73,3 +76,4 @@ and licensed under:
 <ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
 
 <!-- /LICENSE -->
+
