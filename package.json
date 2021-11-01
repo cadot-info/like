@@ -1,6 +1,6 @@
 {
   "name": "cadot-info-like",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A javascript like with cookies and ajax possibility",
   "author": "2021+ Cadot.info ltd <npm@cadot.info> (https://cadot.info)",
   "license": "MIT",
@@ -8,8 +8,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "format": "prettier --write src/**/*.{js,json,md}",
-    "build": "npm run clean && parcel build src/index.html --no-minify --no-source-maps",
-    "start": "parcel -p 8080 --hmr-port 8081 src/index.html --open",
+    "build": "npm run compile && npm run clean ",
     "test": "jest",
     "compile": "projectz compile",
     "posttest": "npm run compile"
@@ -17,7 +16,7 @@
   "keywords": [
     "javascript",
     "like",
-    "favorites"
+    "favorite"
   ],
   "homepage": "https://github.com/cadot-info/like#readme",
   "bugs": {
@@ -28,19 +27,12 @@
     "url": "https://github.com/cadot-info/like.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "node-sass": "^4.14.1",
-    "parcel": "^1.12.4",
-    "prettier": "^1.19.1",
-    "rimraf": "^3.0.2"
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "fs": "^0.0.1-security",
     "jest": "^27.3.1",
     "jsdom": "^18.0.0",
@@ -55,6 +47,8 @@
     "dist/",
     "src/",
     "package.json",
-    "README.md"
+    "README.md",
+    "LICENSE.md",
+    "index.js"
   ]
 }

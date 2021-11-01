@@ -14,11 +14,13 @@
 
 <!-- /BADGES -->
 
+
 <!-- DESCRIPTION/ -->
 
-A javascript like with cookies and ajax possibility
+A javascript like with cookies and ajax possibility (coming soon)
 
 <!-- /DESCRIPTION -->
+
 
 <!-- INSTALL/ -->
 
@@ -27,7 +29,6 @@ A javascript like with cookies and ajax possibility
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
 <ul>
 <li>Install: <code>npm install --save cadot-info-like</code></li>
-<li>Import: <code>import * as pkg from ('cadot-info-like')</code></li>
 <li>Require: <code>const pkg = require('cadot-info-like')</code></li>
 </ul>
 
@@ -36,5 +37,39 @@ A javascript like with cookies and ajax possibility
 
 ## Usage
 
-- import the library by `import { favorites } from 'favorites'`
-- 
+- `const likes = require("cadot-info-like");`
+- `likes.init();` for default config (described after)
+
+### Initialisation
+
+likes.init(class of button, link...,text or image for like, same for not like, id for counter )
+Default value:
+
+- class of button: likes
+- text: i like
+- text: i don't like
+- counter (optional): counter
+
+For example, you can use with font-awesome
+
+```js
+  likes.init(
+    "likesButton",
+    "<i class='fas fa-thumbs-up'></i>",
+    "<i class='fas fa-thumbs-down'></i>",
+    "counterGlobal"
+);
+```
+<!-- LICENSE/ -->
+
+<h2>License</h2>
+
+Unless stated otherwise all works are:
+
+<ul><li>Copyright &copy; 2021+ <a href="https://cadot.info">Cadot.info ltd</a></li></ul>
+
+and licensed under:
+
+<ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
+
+<!-- /LICENSE -->

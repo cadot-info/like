@@ -1,0 +1,17 @@
+version: '3'
+services:
+  blogcadot:
+    image: cadotinfo/nodejs
+    container_name: cadot-info-like
+    volumes:
+      - .:/app
+    networks:
+      - web
+    restart: always
+    ports:
+      - 49101:80
+
+
+networks:
+  web:
+    external: true
