@@ -19,7 +19,7 @@
     "classlike",
     "yes",
     "no",
-    "compteur"
+    "compteur" 
   );
    expect(likes.getParameters()).toBe("classlikeyesnocompteur");
    likes.init();
