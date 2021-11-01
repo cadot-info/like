@@ -16,7 +16,7 @@
  test("var by default", () => {
    //test parameters
    likes.init(
-    "classlike",
+    "classlike", 
     "yes",
     "no",
     "compteur" 
