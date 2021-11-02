@@ -31,7 +31,7 @@ const likes= {
   clear(){
     document.cookie = 'likes=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
   },
-  //get arry of cookie likes or false
+  //get array of cookie likes or false
   get() {
     return checkACookieExists();
   },
