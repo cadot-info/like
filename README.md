@@ -60,6 +60,8 @@ For example, you can use with font-awesome
     "counterGlobal"
 );
 ```
+### Integration
+After in your html, get a tag with a id counter and for the button or href of elements take a data-id="" with uniq number.
 
 please give issues or Pull Request in github ;-)
 
