@@ -9,7 +9,7 @@ services:
       - web
     restart: always
     ports:
-      - 49101:80
+      - 49102:80
 
 
 networks:
