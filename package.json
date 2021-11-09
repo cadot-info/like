@@ -1,7 +1,7 @@
 {
   "name": "cadot-info-like",
   "version": "3.0.4",
-  "description": "A javascript like with cookies and ajax possibility",
+  "description": "A javascript like with cookies ",
   "author": "2021+ Cadot.info ltd <npm@cadot.info> (https://cadot.info)",
   "license": "MIT",
   "main": "src/index.js",
