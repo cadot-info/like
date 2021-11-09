@@ -1,6 +1,6 @@
 <!-- TITLE/ -->
 
-<h1>Like library</h1>
+<h1>A javascript like with cookies and create html, install and use in 5 minutes!</h1>
 
 <!-- /TITLE -->
 
@@ -17,22 +17,18 @@
 
 <!-- DESCRIPTION/ -->
 
-A javascript like with cookies and ajax possibility (coming soon)
+A javascript like with cookies and ajax possibility
 
 <!-- /DESCRIPTION -->
 
-
-<!-- INSTALL/ -->
 
 <h2>Install</h2>
 
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
 <ul>
-<li>Install: <code>npm install --save cadot-info-like</code></li>
-<li>Require: <code>const pkg = require('cadot-info-like')</code></li>
+<li>Require: <code>const likes = require('cadot-info-like')</code></li>
 </ul>
 
-<!-- /INSTALL -->
 
 
 ## Usage
@@ -40,9 +36,10 @@ A javascript like with cookies and ajax possibility (coming soon)
 - `const likes = require("cadot-info-like");`
 - `likes.init();` for default config (described after)
 
-### Initialisation
+you can define your parameters by
 
-likes.init(class of button, link...,text or image for like, same for not like, id for counter )
+`likes.init(class of button, link...,text or image for like, same for not like, id for counter )`
+
 Default value:
 
 - class of button: likes
@@ -61,7 +58,16 @@ For example, you can use with font-awesome
 );
 ```
 ### Integration
-After in your html, get a tag with a id counter and for the button or href of elements take a data-id="" with uniq number.
+```html
+<h1>Counter favorites</h1>
+  <p id="counter">0</p>
+    <ul>
+      <li><a class="favorites" data-id="1" href="#"></a></li>
+      <li><a class="favorites" data-id="2" href="#"></a></li>
+      <li><a class="favorites" data-id="3" href="#"></a></li>
+      <li><a class="favorites" data-id="4" href="#"></a></li>
+    </ul>
+```
 
 please give issues or Pull Request in github ;-)
 
@@ -78,4 +84,3 @@ and licensed under:
 <ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
 
 <!-- /LICENSE -->
-

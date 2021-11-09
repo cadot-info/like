@@ -1,5 +1,5 @@
 {
-    "title": "Like library",
+    "title": "A javascript like with cookies and create html, install and use in 5 minutes!",
     "name": "cadot-info-like",
     "homepage": "https://github.com/cadot-info/like",
     "description": "A javascript like with cookies and ajax possibility",
@@ -7,10 +7,6 @@
     "author": "2021+ Cadot.info ltd <npm@cadot.info> (https://cadot.info)",
     "maintainers": [
         "Cadot.info (npm@cadot.info) (https://cadot.info)"
-    ],
-    "sponsors": [
-    ],
-    "contributors": [
     ],
     "repository": {
         "type": "git",
