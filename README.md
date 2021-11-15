@@ -56,10 +56,13 @@ For example, you can use with font-awesome
     "<i class='fas fa-thumbs-down'></i>",
     "counterGlobal"
 );
+
 ```
+
 ### Integration
 
 with default parameters
+
 ```html
 <h1>Counter likes</h1>
   <p id="counter">0</p>
@@ -69,6 +72,26 @@ with default parameters
       <li><a class="likes" data-id="3" href="#"></a></li>
       <li><a class="likes" data-id="4" href="#"></a></li>
     </ul>
+```
+
+### Tips
+
+If you want send your list of likes at your server ou can send by get
+`#likesSend` is the id of button or a for acces at your favorites
+example of result is `/mes-favoris?liste=9,8`
+
+```js
+
+$("#likesSend").on("click", function (event) {
+  event.preventDefault();
+  if (document.cookie == undefined) return false;
+  let field = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("likes="));
+  if (field == undefined) return false;
+  let favoris = JSON.parse(field.split("=")[1]);
+  window.location.href = "/mes-favoris?liste=" + favoris;
+});
 ```
 
 please give issues or Pull Request in github ;-)
