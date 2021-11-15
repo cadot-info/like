@@ -1,4 +1,4 @@
-var ButtonClass , like , notlike , IdCounter ;
+var ButtonClass , like , notlike , IdCounter,cookie ;
 
 const likes= {
   //loop for take action on element with class ButtonClass and add like or not like on element
@@ -8,15 +8,12 @@ const likes= {
     notlike=init_notlike;
     IdCounter=init_IdCounter;
     
-    let cookie = checkACookieExists('likes');
+    cookie = checkACookieExists('likes');
     if (cookie==false)cookie=[];
     // take action for class elements
     var elements = document.getElementsByClassName(ButtonClass);
+    if(elements)
     for (var i = 0; i < elements.length; i++) {
-      //text by cookie
-      if(cookie.includes(elements[i].dataset.id))elements[i].innerHTML=notlike
-        else elements[i].innerHTML=like
-
       elements[i].addEventListener(
         'click',
         function() {
@@ -41,7 +38,7 @@ const likes= {
   },
   //add or remove id in cookie likes
   change(id) {
-    let cookie = checkACookieExists('likes');
+    cookie = checkACookieExists('likes');
     if (cookie != false) {
       var index = cookie.indexOf(id);
       if (index !== -1) cookie.splice(index, 1);
@@ -52,21 +49,25 @@ const likes= {
     var d = new Date();
     d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * 360);
     document.cookie = 'likes=' + JSON.stringify(cookie) + ';path=/;expires=' + d.toGMTString();
-    var elements = document.getElementsByClassName(ButtonClass);
-    for (var i = 0; i < elements.length; i++) {
-      if(elements[i].getAttribute('data-id')==id)
-      {
-        if(cookie.includes(id))elements[i].innerHTML=notlike
-        else elements[i].innerHTML=like
-      }
-    };
     likes.update();
     return cookie;
   },
   //update in document the counter
   update() {
-    if(typeof(document.getElementById(IdCounter)) != 'undefined' && document.getElementById(IdCounter) != null)
-    return document.getElementById(IdCounter).textContent = checkACookieExists().length;
+    //update text
+    var elements = document.getElementsByClassName(ButtonClass);
+    if(elements)
+    for (var i = 0; i < elements.length; i++) {
+      if(!elements[i].hasAttribute('nochange'))
+      {
+        if(cookie.includes(elements[i].dataset.id))elements[i].innerHTML=notlike
+        else elements[i].innerHTML=like
+      }
+    };
+    let longr=cookie.length
+    if(document.getElementById(IdCounter) && !longr==0)
+    return document.getElementById(IdCounter).textContent = longr;
+    else return longr
   }
 }
 
