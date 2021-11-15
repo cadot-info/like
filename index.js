@@ -49,8 +49,6 @@ const likes= {
     var d = new Date();
     d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * 360);
     document.cookie = 'likes=' + JSON.stringify(cookie) + ';path=/;expires=' + d.toGMTString();
-    if(e.hasAttribute('nochange'))window.location.reload();
-    likes.update();
     return cookie;
   },
   //update in document the counter

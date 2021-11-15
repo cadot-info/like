@@ -74,9 +74,9 @@ with default parameters
     </ul>
 ```
 
-### Tips
+### Tips 
 
-If you want send your list of likes at your server ou can send by get
+- If you want send your list of likes at your server ou can send by get
 `#likesSend` is the id of button or a for acces at your favorites
 example of result is `/mes-favoris?liste=9,8`
 
@@ -93,6 +93,11 @@ $("#likesSend").on("click", function (event) {
   window.location.href = "/mes-favoris?liste=" + favoris;
 });
 ```
+
+- You can block the changement of text.
+
+Add nochange `... class="likes" nochange date-id="3" id="...`
+
 
 please give issues or Pull Request in github ;-)
 
