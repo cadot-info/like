@@ -58,14 +58,16 @@ For example, you can use with font-awesome
 );
 ```
 ### Integration
+
+with default parameters
 ```html
-<h1>Counter favorites</h1>
+<h1>Counter likes</h1>
   <p id="counter">0</p>
     <ul>
-      <li><a class="favorites" data-id="1" href="#"></a></li>
-      <li><a class="favorites" data-id="2" href="#"></a></li>
-      <li><a class="favorites" data-id="3" href="#"></a></li>
-      <li><a class="favorites" data-id="4" href="#"></a></li>
+      <li><a class="likes" data-id="1" href="#"></a></li>
+      <li><a class="likes" data-id="2" href="#"></a></li>
+      <li><a class="likes" data-id="3" href="#"></a></li>
+      <li><a class="likes" data-id="4" href="#"></a></li>
     </ul>
 ```
 
