@@ -17,7 +17,7 @@ const likes= {
       elements[i].addEventListener(
         'click',
         function() {
-          likes.change(this.dataset.id); //add action for change cookie
+          likes.change(this); //add action for change cookie
         },
         false
       );
@@ -37,18 +37,19 @@ const likes= {
     return ButtonClass + like + notlike + IdCounter;
   },
   //add or remove id in cookie likes
-  change(id) {
+  change(e) {
     cookie = checkACookieExists('likes');
     if (cookie != false) {
-      var index = cookie.indexOf(id);
+      var index = cookie.indexOf(e.dataset.id);
       if (index !== -1) cookie.splice(index, 1);
-      else cookie.push(id);
+      else cookie.push(e.dataset.id);
     } else {
-      cookie = [id];
+      cookie = [e.dataset.id];
     }
     var d = new Date();
     d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * 360);
     document.cookie = 'likes=' + JSON.stringify(cookie) + ';path=/;expires=' + d.toGMTString();
+    if(e.hasAttribute('nochange'))window.location.reload();
     likes.update();
     return cookie;
   },

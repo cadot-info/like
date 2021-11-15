@@ -9,6 +9,7 @@
  
  
  
+ 
  beforeAll(() => {
    document.body.innerHTML = html;
  });
@@ -33,7 +34,6 @@
    expect(document.getElementById('choix1').innerHTML).toBe('i like');
    document.getElementById('choix1').click();
    expect(document.getElementById('choix1').innerHTML).toBe("i don't like");
-   console.log(document.body.innerHTML);
    expect(document.getElementById('counter').textContent).toBe("1");
 
    document.getElementById('choix2').click();
